@@ -465,7 +465,7 @@ function App(): React.JSX.Element {
       let temp = content;
       if (encryptt === true) {
         try {
-          const response = await fetch('http://10.0.2.2:5000/api/encrypt', {
+          const response = await fetch('https://dawascryptapp.vercel.app/api/encrypt', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -528,7 +528,7 @@ function App(): React.JSX.Element {
   const decryptMessage = React.useCallback(
     async (ciphertext: string): Promise<string | null> => {
       try {
-        const response = await fetch('http://10.0.2.2:5000/api/decrypt', {
+        const response = await fetch('https://dawascryptapp.vercel.app/api/decrypt', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
