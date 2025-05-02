@@ -39,6 +39,7 @@ import {
 // type SectionProps = PropsWithChildren<{
 //   title: string;
 // }>;
+const BASE_URL = 'https://dawascrypt-backend-production.up.railway.app';
 
 type MessageDetail = {
   id: string;
@@ -465,7 +466,7 @@ function App(): React.JSX.Element {
       let temp = content;
       if (encryptt === true) {
         try {
-          const response = await fetch('https://dawascryptapp.vercel.app/api/encrypt', {
+          const response = await fetch(`${BASE_URL}/api/encrypt`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -528,7 +529,7 @@ function App(): React.JSX.Element {
   const decryptMessage = React.useCallback(
     async (ciphertext: string): Promise<string | null> => {
       try {
-        const response = await fetch('https://dawascryptapp.vercel.app/api/decrypt', {
+        const response = await fetch(`${BASE_URL}/api/decrypt`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
