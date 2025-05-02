@@ -1,4 +1,4 @@
-package com.dawascrypt
+package com.dawascrypt1
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
